@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+
+import api from '../../services/api'
 import {
   Container,
   Info,
@@ -21,49 +23,94 @@ import {
   AllIssuesBtnText,
 } from './styles'
 
-const Repository: React.FC = () => {
+interface Props {
+  route: {
+    params: {
+      repoName: string
+    }
+  }
+}
+
+interface Repository {
+  full_name: string
+  description: string
+  stargazers_count: number
+  forks_count: number
+  open_issues_count: number
+  owner: {
+    login: string
+    avatar_url: string
+  }
+}
+
+interface Issue {
+  id: number
+  title: string
+  html_url: string
+  user: {
+    login: string
+  }
+}
+
+const Repository: React.FC<Props> = ({ route }) => {
+  const { repoName } = route.params
+  const [repo, setRepo] = useState<Repository | null>(null)
+  const [issues, setIssues] = useState<Issue[]>([])
+
+  useEffect(() => {
+    api.get(`repos/${repoName}`).then(response => {
+      setRepo(response.data)
+    })
+    api.get(`repos/${repoName}/issues?page=1&per_page=5`).then(response => {
+      setIssues(response.data)
+    })
+  }, [repoName])
+
   return (
     <Container>
-      <Info>
-        <InfoHeader>
-          <HeaderImg
-            source={{
-              uri:
-                'https://avatars3.githubusercontent.com/u/60039311?s=460&u=46adc3921b562ab005d764b5dadbeee5649a8195&v=4',
-            }}
-          />
-          <HeaderView>
-            <HeaderName>repo.full_name</HeaderName>
-            <HeaderDescription>repo.description</HeaderDescription>
-          </HeaderView>
-        </InfoHeader>
+      {repo && (
+        <Info>
+          <InfoHeader>
+            <HeaderImg
+              source={{
+                uri: repo.owner.avatar_url,
+              }}
+            />
+            <HeaderView>
+              <HeaderName>{repo.full_name}</HeaderName>
+              <HeaderDescription>{repo.description}</HeaderDescription>
+            </HeaderView>
+          </InfoHeader>
 
-        <InfoUl>
-          <InfoLi>
-            <LiCount>1651</LiCount>
-            <LiName>Stars</LiName>
-          </InfoLi>
+          <InfoUl>
+            <InfoLi>
+              <LiCount>{repo.stargazers_count}</LiCount>
+              <LiName>Stars</LiName>
+            </InfoLi>
 
-          <InfoLi>
-            <LiCount>845</LiCount>
-            <LiName>Forks</LiName>
-          </InfoLi>
+            <InfoLi>
+              <LiCount>{repo.forks_count}</LiCount>
+              <LiName>Forks</LiName>
+            </InfoLi>
 
-          <InfoLi>
-            <LiCount>158</LiCount>
-            <LiName>Issues abertos</LiName>
-          </InfoLi>
-        </InfoUl>
-      </Info>
+            <InfoLi>
+              <LiCount>{repo.open_issues_count}</LiCount>
+              <LiName>Issues abertos</LiName>
+            </InfoLi>
+          </InfoUl>
+        </Info>
+      )}
 
       <Issues>
-        <Issue>
-          <IssueView>
-            <IssueTitle>issue.title</IssueTitle>
-            <IssueUser>issue.user.login</IssueUser>
-          </IssueView>
-          <RightArrow />
-        </Issue>
+        {issues.map(issue => (
+          <Issue key={issue.id}>
+            <IssueView>
+              <IssueTitle>{issue.title}</IssueTitle>
+              <IssueUser>{issue.user.login}</IssueUser>
+            </IssueView>
+            <RightArrow />
+          </Issue>
+        ))}
       </Issues>
 
       <AllIssuesBtn>

@@ -16,6 +16,7 @@
     "@types/": "react-navigation/native",
     "@types/react-native-vector-icons": "^6.4.5",
     "@types/styled-components": "^5.1.1",
+    "axios": "^0.19.2",
     "react": "16.13.1",
     "react-native": "0.63.0",
     "react-native-gesture-handler": "^1.6.1",

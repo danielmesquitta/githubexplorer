@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components/native'
+import { FlatList } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import Icon from 'react-native-vector-icons/FontAwesome5'
 
@@ -6,6 +7,10 @@ import { colors } from '../../styles/variables'
 
 interface InputProps {
   hasError: boolean
+}
+
+interface ButtonProps {
+  onPress: Function
 }
 
 export const Container = styled.SafeAreaView`
@@ -40,7 +45,7 @@ export const Error = styled.Text`
   margin: 4px 16px;
 `
 
-export const Button = styled(TouchableOpacity)`
+export const Button = styled(TouchableOpacity)<ButtonProps>`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,12 +60,12 @@ export const ButtonText = styled.Text`
   color: #fff;
 `
 
-export const Repositories = styled.View`
+export const Repositories = styled(FlatList as new () => FlatList)`
   margin-top: 20px;
   max-width: 700px;
 `
 
-export const Repo = styled(TouchableOpacity)`
+export const Repo = styled(TouchableOpacity)<ButtonProps>`
   margin-top: 20px;
   background: #fff;
   width: 100%;

@@ -4,7 +4,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler'
 
 import { colors } from '../../styles/variables'
 
-export const Container = styled.View`
+export const Container = styled.ScrollView`
   padding: 20px;
 `
 
@@ -96,7 +96,7 @@ export const AllIssuesBtn = styled(TouchableOpacity)`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 10px auto;
+  margin: 10px auto 50px;
   width: 210px;
   height: 55px;
   background: ${colors.button};
