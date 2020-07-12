@@ -55,7 +55,7 @@ $ git clone https://github.com/DanielMesquitta/githubexplorer && cd githubexplor
 Inside the the root directory
 
 ```shell
-# go to web folder
+# Go to web folder
 $ cd web
 
 # Install the dependencies
