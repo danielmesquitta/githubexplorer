@@ -1,0 +1,37 @@
+<h1 align="center">
+  <img src="./web/src/assets/logo.svg" width=400 />
+</h1>
+
+This project is divided in 2 parts, [WEB](#web) and [MOBILE](#mobile). <br/><br/>
+The idea is to make easier to explore github repositories, so you can just type a repository name (the format must be "user/repositoryname") and then you will add 
+this repo to your "favorites" list. You will be able to click on any item of this list and access the repo info, like stars, forks, etc. Later you can come back
+and your list will still be there, since all is storaged on your local storage. You can see the web site version [clicking here]() or you can [follow this steps]()
+to try the mobile version.
+
+<br><br><br>
+<img src="Mockup.PNG">
+<br>
+
+## WEB
+
+### Technologies
+
+- [React](https://reactjs.org/)
+- [Typescript](https://www.typescriptlang.org/)
+- [React Router DOM](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)
+- [React Icons](https://github.com/react-icons/react-icons)
+- [Styled Components](https://styled-components.com/)
+- [Axios](https://github.com/axios/axios)
+
+
+## MOBILE
+
+### Technologies
+
+- [React Native](https://reactnative.dev/)
+- [Typescript](https://www.typescriptlang.org/)
+- [React Navigation](https://reactnavigation.org/)
+- [React Native Community Async Storage](https://github.com/react-native-community/async-storage)
+- [React Native Vector Icons](https://github.com/oblador/react-native-vector-icons)
+- [Styled Components](https://styled-components.com/)
+- [Axios](https://github.com/axios/axios)
