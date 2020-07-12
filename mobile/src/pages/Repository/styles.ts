@@ -4,6 +4,10 @@ import { TouchableOpacity } from 'react-native-gesture-handler'
 
 import { colors } from '../../styles/variables'
 
+interface ButtonProps {
+  onPress: Function
+}
+
 export const Container = styled.ScrollView`
   padding: 20px;
 `
@@ -59,7 +63,7 @@ export const Issues = styled.View`
   margin-top: 40px;
 `
 
-export const Issue = styled(TouchableOpacity)`
+export const Issue = styled(TouchableOpacity)<ButtonProps>`
   background: #fff;
   border-radius: 5px;
   width: 100%;
@@ -93,7 +97,7 @@ export const RightArrow = styled(Icon).attrs({
   color: #cbcbd6;
 `
 
-export const AllIssuesBtn = styled(TouchableOpacity)`
+export const AllIssuesBtn = styled(TouchableOpacity)<ButtonProps>`
   display: flex;
   align-items: center;
   justify-content: center;

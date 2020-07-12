@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import AsyncStorage from '@react-native-community/async-storage'
+import { Linking } from 'react-native'
 
 import api from '../../services/api'
 import {
@@ -67,6 +67,14 @@ const Repository: React.FC<Props> = ({ route }) => {
     })
   }, [repoName])
 
+  const navigateToUrl = async (url: string) => {
+    const supported = await Linking.canOpenURL(url)
+    if (supported) {
+      console.log(url)
+      await Linking.openURL(url)
+    }
+  }
+
   return (
     <Container>
       {repo && (
@@ -104,7 +112,7 @@ const Repository: React.FC<Props> = ({ route }) => {
 
       <Issues>
         {issues.map(issue => (
-          <Issue key={issue.id}>
+          <Issue key={issue.id} onPress={() => navigateToUrl(issue.html_url)}>
             <IssueView>
               <IssueTitle>{issue.title}</IssueTitle>
               <IssueUser>{issue.user.login}</IssueUser>
@@ -114,7 +122,9 @@ const Repository: React.FC<Props> = ({ route }) => {
         ))}
       </Issues>
 
-      <AllIssuesBtn>
+      <AllIssuesBtn
+        onPress={() => navigateToUrl(`https://github.com/${repoName}/issues`)}
+      >
         <AllIssuesBtnText>Ver todos os issues</AllIssuesBtnText>
       </AllIssuesBtn>
     </Container>

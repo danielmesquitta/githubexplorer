@@ -1,4 +1,4 @@
-#Sun Jul 12 11:42:38 BRT 2020
+#Sun Jul 12 16:58:43 BRT 2020
 base.0=/home/daniel/Projects/githubexplorer/mobile/android/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
