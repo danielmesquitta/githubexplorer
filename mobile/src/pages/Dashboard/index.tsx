@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { NavigationAction } from '@react-navigation/native'
+import AsyncStorage from '@react-native-community/async-storage'
 
 import api from '../../services/api'
 import {
@@ -18,6 +19,7 @@ import {
   Description,
   RightArrow,
 } from './styles'
+import { CheckBox } from 'react-native'
 
 interface Props {
   navigation: {
@@ -36,17 +38,28 @@ interface Repository {
   }
 }
 
-interface RenderItemsProps {
-  id: number
-  item: Repository
-}
-
 const Dashboard: React.FC<Props> = ({ navigation }) => {
   const [newRepo, setNewRepo] = useState('')
 
   const [repositories, setRepositories] = useState<Repository[]>([])
 
   const [inputError, setInputError] = useState('')
+
+  useEffect(() => {
+    if (!repositories.length) {
+      AsyncStorage.getItem('@GithubExplorer:repositories').then(
+        storagedRepos =>
+          storagedRepos && setRepositories(JSON.parse(storagedRepos))
+      )
+    }
+  }, [])
+
+  useEffect(() => {
+    AsyncStorage.setItem(
+      '@GithubExplorer:repositories',
+      JSON.stringify(repositories)
+    )
+  }, [repositories])
 
   async function handleAddRepository(): Promise<void> {
     if (!newRepo) {
@@ -75,6 +88,7 @@ const Dashboard: React.FC<Props> = ({ navigation }) => {
       <Title>Dashboard</Title>
       <Form>
         <Input
+          autoCapitalize="none"
           value={newRepo}
           onChangeText={setNewRepo}
           placeholder='"autor/nome" do repositório'

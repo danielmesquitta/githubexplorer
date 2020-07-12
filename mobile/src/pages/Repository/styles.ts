@@ -63,7 +63,7 @@ export const Issue = styled(TouchableOpacity)`
   background: #fff;
   border-radius: 5px;
   width: 100%;
-  padding: 24px;
+  padding: 6px 12px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -72,6 +72,7 @@ export const Issue = styled(TouchableOpacity)`
 
 export const IssueView = styled.View`
   flex: 1;
+  margin-right: 8px;
 `
 
 export const IssueTitle = styled.Text`

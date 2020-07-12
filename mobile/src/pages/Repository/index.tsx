@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import AsyncStorage from '@react-native-community/async-storage'
 
 import api from '../../services/api'
 import {
@@ -61,7 +62,7 @@ const Repository: React.FC<Props> = ({ route }) => {
     api.get(`repos/${repoName}`).then(response => {
       setRepo(response.data)
     })
-    api.get(`repos/${repoName}/issues?page=1&per_page=5`).then(response => {
+    api.get(`repos/${repoName}/issues?page=1&per_page=10`).then(response => {
       setIssues(response.data)
     })
   }, [repoName])
