@@ -5,8 +5,7 @@
 This project is divided in 2 parts, [WEB](#web) and [MOBILE](#mobile). <br/><br/>
 The idea is to make easier to explore github repositories, so you can just type a repository name (the format must be "user/repositoryname") and it will be add 
 to your "favorites" list. You will be able to click on any item of this list and access the repo info, like stars, forks, etc. Later you can come back
-and your list will still be there, since all is storaged on your local storage. You can see the web site version [clicking here]() or you can [follow this steps]()
-to try the mobile version.
+and your list will still be there, since all is storaged on your local storage. You can see the web site version [clicking here]() or you can [follow this steps](#getting-started) to try the mobile version.
 
 <br>
 <img src="Mockup.png">
