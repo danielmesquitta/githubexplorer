@@ -9,7 +9,7 @@ and your list will still be there, since all is storaged on your local storage. 
 to try the mobile version.
 
 <br><br><br>
-<img src="Mockup.PNG">
+<img src="Mockup.png">
 <br>
 
 ## WEB
