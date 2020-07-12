@@ -8,7 +8,7 @@ to your "favorites" list. You will be able to click on any item of this list and
 and your list will still be there, since all is storaged on your local storage. You can see the web site version [clicking here]() or you can [follow this steps]()
 to try the mobile version.
 
-<br><br><br>
+<br>
 <img src="Mockup.png">
 <br>
 
@@ -35,3 +35,53 @@ to try the mobile version.
 - [React Native Vector Icons](https://github.com/oblador/react-native-vector-icons)
 - [Styled Components](https://styled-components.com/)
 - [Axios](https://github.com/axios/axios)
+
+## GETTING STARTED
+
+### Requirements
+
+- [Yarn](https://yarnpkg.com/) or [npm](https://www.npmjs.com/)
+- [git](https://git-scm.com/)
+- [React Native development environment](https://reactnative.dev/docs/environment-setup)
+
+#### Clone the project and access the folder
+
+```shell
+$ git clone https://github.com/DanielMesquitta/githubexplorer && cd githubexplorer
+```
+
+### Start web
+
+Inside the the root directory
+
+```shell
+# go to web folder
+$ cd web
+
+# Install the dependencies
+$ yarn
+
+# Start
+$ yarn start
+```
+
+### Start mobile
+
+Inside the the root directory
+
+```shell
+# Go to mobile folder
+$ cd mobile
+
+# Install the dependencies
+$ yarn
+
+# Run this if you will emulate on an android
+$ yarn android
+
+# Run this if you will emulate on an ios
+$ yarn ios
+
+# Start the app
+$ yarn start
+```
