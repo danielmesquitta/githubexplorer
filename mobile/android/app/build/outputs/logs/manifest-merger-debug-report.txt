@@ -113,13 +113,13 @@ MERGED from [com.facebook.soloader:annotation:0.8.2] /home/daniel/.gradle/caches
 	tools:ignore
 		ADDED from /home/daniel/Projects/githubexplorer/mobile/android/app/src/debug/AndroidManifest.xml:7:75-114
 	android:roundIcon
-		ADDED from /home/daniel/Projects/githubexplorer/mobile/android/app/src/main/AndroidManifest.xml:10:7-52
-		ADDED from /home/daniel/Projects/githubexplorer/mobile/android/app/src/main/AndroidManifest.xml:10:7-52
+		ADDED from /home/daniel/Projects/githubexplorer/mobile/android/app/src/main/AndroidManifest.xml:10:7-41
+		ADDED from /home/daniel/Projects/githubexplorer/mobile/android/app/src/main/AndroidManifest.xml:10:7-41
 	tools:targetApi
 		ADDED from /home/daniel/Projects/githubexplorer/mobile/android/app/src/debug/AndroidManifest.xml:7:54-74
 	android:icon
-		ADDED from /home/daniel/Projects/githubexplorer/mobile/android/app/src/main/AndroidManifest.xml:9:7-41
-		ADDED from /home/daniel/Projects/githubexplorer/mobile/android/app/src/main/AndroidManifest.xml:9:7-41
+		ADDED from /home/daniel/Projects/githubexplorer/mobile/android/app/src/main/AndroidManifest.xml:9:7-36
+		ADDED from /home/daniel/Projects/githubexplorer/mobile/android/app/src/main/AndroidManifest.xml:9:7-36
 	android:allowBackup
 		ADDED from /home/daniel/Projects/githubexplorer/mobile/android/app/src/main/AndroidManifest.xml:11:7-34
 		ADDED from /home/daniel/Projects/githubexplorer/mobile/android/app/src/main/AndroidManifest.xml:11:7-34

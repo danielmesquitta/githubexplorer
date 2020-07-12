@@ -27,12 +27,12 @@
 18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 18-->[androidx.core:core:1.1.0] /home/daniel/.gradle/caches/transforms-2/files-2.1/639e914bfc1efa21e36199d3ff2c5eef/core-1.1.0/AndroidManifest.xml:24:18-86
 19        android:debuggable="true"
-20        android:icon="@mipmap/ic_launcher"
-20-->/home/daniel/Projects/githubexplorer/mobile/android/app/src/main/AndroidManifest.xml:9:7-41
+20        android:icon="@drawable/icon"
+20-->/home/daniel/Projects/githubexplorer/mobile/android/app/src/main/AndroidManifest.xml:9:7-36
 21        android:label="@string/app_name"
 21-->/home/daniel/Projects/githubexplorer/mobile/android/app/src/main/AndroidManifest.xml:8:7-39
-22        android:roundIcon="@mipmap/ic_launcher_round"
-22-->/home/daniel/Projects/githubexplorer/mobile/android/app/src/main/AndroidManifest.xml:10:7-52
+22        android:roundIcon="@drawable/icon"
+22-->/home/daniel/Projects/githubexplorer/mobile/android/app/src/main/AndroidManifest.xml:10:7-41
 23        android:theme="@style/AppTheme"
 23-->/home/daniel/Projects/githubexplorer/mobile/android/app/src/main/AndroidManifest.xml:12:7-38
 24        android:usesCleartextTraffic="true" >
