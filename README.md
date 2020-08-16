@@ -22,6 +22,14 @@ and your list will still be there, since all is storaged on your local storage. 
 - [Styled Components](https://styled-components.com/)
 - [Axios](https://github.com/axios/axios)
 
+<br>
+
+<p align="center">
+  <img src="docs/demo-web.gif">
+<p>
+  
+<br>
+
 ## MOBILE
 
 ### Technologies
